@@ -22,6 +22,7 @@ PRODUCT_PACKAGES += \
 # Inherit products (Most specific first)
 # tass blobs > samsung common(device/vendor) > other blobs
 $(call inherit-product, vendor/samsung/callisto/vendor_blobs.mk)
+$(call inherit-product, device/samsung/callisto/common.mk)
 
 ## LDPI assets
 PRODUCT_AAPT_CONFIG := normal mdpi ldpi
