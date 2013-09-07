@@ -18,7 +18,13 @@ PRODUCT_PACKAGES += \
     wlan_tool \
     wmiconfig \
     wpa_supplicant
-
+## Ramdisk Modules
+PRODUCT_COPY_FILES += \
+    device/samsung/callisto/ramdisk/CALLISTO.rle:root/CALLISTO.rle \
+    device/samsung/callisto/ramdisk/modules/fsr.ko:root/lib/modules/fsr.ko \
+    device/samsung/callisto/ramdisk/modules/fsr_stl.ko:root/lib/modules/fsr_stl.ko \
+    device/samsung/callisto/ramdisk/modules/sec_param.ko:root/lib/modules/sec_param.ko
+    
 # Inherit products (Most specific first)
 # tass blobs > samsung common(device/vendor) > other blobs
 $(call inherit-product, vendor/samsung/callisto/vendor_blobs.mk)
@@ -34,7 +40,7 @@ DEVICE_PACKAGE_OVERLAYS += device/samsung/callisto/overlay
 
 # ROM Manager app
 PRODUCT_PROPERTY_OVERRIDES += \
-        ro.goo.developerid=teamkang \
+        ro.goo.developerid=ankur850 \
 	ro.goo.board=$(TARGET_PRODUCT) \
 	ro.goo.rom=cm10.1_$(TARGET_PRODUCT) \
 	ro.goo.version=1
