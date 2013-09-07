@@ -100,13 +100,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
 ## SAMSUNG_BOOTLOADER is the product model changed into appropriate string parsed by init.
 ## Example: -GT-I5500 becomes gt-i5500board, -GT-S5830 becomes gt-s5830board, and so on.
 SAMSUNG_BOOTLOADER := $(shell echo $(PRODUCT_VERSION_DEVICE_SPECIFIC)board | tr '[A-Z]' '[a-z]' | cut -c 2-)
-PRODUCT_COPY_FILES += \
-    device/samsung/callisto/ramdisk/init.msm7x27.rc:root/init.$(SAMSUNG_BOOTLOADER).rc \
-    device/samsung/callisto/ramdisk/ueventd.msm7x27.rc:root/ueventd.$(SAMSUNG_BOOTLOADER).rc \
-    device/samsung/callisto/ramdisk/CALLISTO.rle:root/CALLISTO.rle \
-    device/samsung/callisto/ramdisk/modules/fsr.ko:root/lib/modules/fsr.ko \
-    device/samsung/callisto/ramdisk/modules/fsr_stl.ko:root/lib/modules/fsr_stl.ko \
-    device/samsung/callisto/ramdisk/modules/sec_param.ko:root/lib/modules/sec_param.ko \
+
+PRODUCT_PACKAGES += \
+    fstab.msm7x27 \
+    init.$(SAMSUNG_BOOTLOADER).rc \
+    ueventd.$(SAMSUNG_BOOTLOADER).rc
 
 # Inherit qcom/msm7x27
 $(call inherit-product, device/qcom/msm7x27/msm7x27.mk)
