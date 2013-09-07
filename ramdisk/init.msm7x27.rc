@@ -17,6 +17,12 @@ on early-init
     export SD_EXT_DIRECTORY /sd-ext
    
 on fs
+    # framebuffer permission for copybit
+    chmod 0666 /dev/graphics/fb0
+
+    # mount file system
+    mount_all /fstab.gt-i5510board
+    
     mount ext4 /dev/block/stl12 /system wait rw
     mount ext4 /dev/block/stl12 /system wait ro remount
     mount ext4 /dev/block/stl13 /data wait nosuid nodev
