@@ -40,7 +40,8 @@ BOARD_LDPI_RECOVERY := true
 BOARD_USE_CUSTOM_RECOVERY_FONT := "<font_7x16.h>"
 BOARD_CUSTOM_GRAPHICS := ../../../device/samsung/callisto/recovery/graphics.c
 TARGET_RECOVERY_INITRC := device/samsung/callisto/recovery/recovery.rc
-TARGET_RECOVERY_FSTAB := device/samsung/callisto/recovery/recovery.fstab
+TARGET_RECOVERY_FSTAB := device/samsung/callisto/recovery/fstab.callisto
+RECOVERY_FSTAB_VERSION := 2
 
 ## TWRP Changes
 #TARGET_RECOVERY_INITRC := device/samsung/callisto/twrp/recovery.rc
