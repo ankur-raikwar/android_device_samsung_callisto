@@ -27,7 +27,6 @@ BOARD_KERNEL_BASE := 0x13600000
 TARGET_BOOTLOADER_BOARD_NAME := callisto
 TARGET_KERNEL_CONFIG := callisto_cm_rev03_defconfig
 TARGET_OTA_ASSERT_DEVICE := callisto,GT-I5510
-#TARGET_PREBUILT_RECOVERY_KERNEL := device/samsung/callisto/recovery_kernel
 TARGET_PREBUILT_KERNEL := device/samsung/callisto/zImage
 
 ## Camera FC hack
