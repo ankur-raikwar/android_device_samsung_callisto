@@ -2,6 +2,9 @@
 app/Exchange2.apk
 app/Email2.apk
 
+# LatinIME (20 MB)
+app/LatinIME.apk
+
 # Video editor (5MB)
 app/VideoEditor.apk
 lib/libvideoeditor_jni.so
