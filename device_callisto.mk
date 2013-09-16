@@ -38,7 +38,7 @@ $(call inherit-product, device/ldpi-common/ldpi.mk)
 ## Inherit overlays  (Most specific last)
 DEVICE_PACKAGE_OVERLAYS += device/samsung/callisto/overlay
 
-## LatinIME ligth version
+## Prebuilts app/ to save system
 PRODUCT_COPY_FILES += \
     device/samsung/callisto/prebuilt/app/LatinIME2.apk:system/app/LatinIME2.apk
-    
+    device/samsung/callisto/prebuilt/app/HoloWeb.apk:system/app/Browser.apk
