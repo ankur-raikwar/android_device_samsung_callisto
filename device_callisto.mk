@@ -38,10 +38,6 @@ $(call inherit-product, device/ldpi-common/ldpi.mk)
 ## Inherit overlays  (Most specific last)
 DEVICE_PACKAGE_OVERLAYS += device/samsung/callisto/overlay
 
-## ROM Manager app
-PRODUCT_COPY_FILES += \
-    device/samsung/callisto/prebuilt/app/RomManager.apk:system/app/RomManager.apk
-
 ## LatinIME ligth version
 PRODUCT_COPY_FILES += \
     device/samsung/callisto/prebuilt/app/LatinIME2.apk:system/app/LatinIME2.apk
