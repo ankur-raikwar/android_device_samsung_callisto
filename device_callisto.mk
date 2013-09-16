@@ -42,9 +42,3 @@ DEVICE_PACKAGE_OVERLAYS += device/samsung/callisto/overlay
 PRODUCT_COPY_FILES += \
     device/samsung/callisto/prebuilt/app/LatinIME2.apk:system/app/LatinIME2.apk
     
-# ROM Manager app
-PRODUCT_PROPERTY_OVERRIDES += \
-        ro.goo.developerid=ankur850 \
-	ro.goo.board=callisto \
-	ro.goo.rom=cm10.2_$(TARGET_PRODUCT) \
-	ro.goo.version=1
