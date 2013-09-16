@@ -1,9 +1,9 @@
 # Extra apps
 app/Exchange2.apk
 app/Email2.apk
-
-# LatinIME (20 MB)
 app/LatinIME.apk
+app/Browser.apk
+app/QuickSearchBox.apk
 
 # Video editor (5MB)
 app/VideoEditor.apk
