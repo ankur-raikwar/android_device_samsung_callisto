@@ -104,7 +104,8 @@ SAMSUNG_BOOTLOADER := $(shell echo $(PRODUCT_VERSION_DEVICE_SPECIFIC)board | tr 
 PRODUCT_PACKAGES += \
     fstab.$(SAMSUNG_BOOTLOADER) \
     init.$(SAMSUNG_BOOTLOADER).rc \
-    ueventd.$(SAMSUNG_BOOTLOADER).rc
+    ueventd.$(SAMSUNG_BOOTLOADER).rc \
+    init.$(SAMSUNG_BOOTLOADER).usb.rc
 
 # Inherit qcom/msm7x27
 $(call inherit-product, device/qcom/msm7x27/msm7x27.mk)
