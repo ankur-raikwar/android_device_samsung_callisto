@@ -26,10 +26,6 @@ on fs
     # mount file system
     mount_all /fstab.gt-i5510board
     
-    mount ext4 /dev/block/stl12 /system wait rw
-    mount ext4 /dev/block/stl12 /system wait ro remount
-    mount ext4 /dev/block/stl13 /data wait nosuid nodev
-    mount ext4 /dev/block/stl14 /cache wait nosuid nodev
 
     chown radio /dev/bml7
     chown radio /dev/bml10
@@ -55,7 +51,6 @@ on boot
     write /sys/devices/system/cpu/cpu0/cpufreq/ondemand/down_differential 3
     write /sys/devices/system/cpu/cpu0/cpufreq/ondemand/sampling_rate 50000
     write /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq 245760
-    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq 600255
 
 # Permissions for CM10 IO Scheduler settings
     chown system system /sys/block/mmcblk0/queue/scheduler
@@ -149,7 +144,7 @@ on boot
     chown radio radio 0770 /data/radio
 
 # MAX8899 headset detect 
-	chown radio system /sys/class/switch/h2w/state
+    chown radio system /sys/class/switch/h2w/state
     chown system system /sys/class/leds/lcd-backlight/brightness
     chown system system /sys/class/leds/button-backlight/brightness
     chown system camera /sys/class/leds/flashlight/brightness
@@ -250,15 +245,6 @@ service memsicd /system/bin/memsicd
     user root
     group root
     oneshot	
-
-# From init.gt-i5500.rc by subpsyke
-service get_macaddrs /system/bin/get_macaddrs
-    user root
-    oneshot
-    disabled
-
-on property:init.svc.ril-daemon=running
-    start get_macaddrs
 
 service setup_fs /system/bin/setup_fs /dev/block/stl13 /dev/block/stl14
     user root
