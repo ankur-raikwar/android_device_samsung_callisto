@@ -1,0 +1,65 @@
+LOCAL_PATH:= $(call my-dir)
+
+# fstab
+include $(CLEAR_VARS)
+LOCAL_MODULE		:= fstab.$(SAMSUNG_BOOTLOADER)
+LOCAL_MODULE_TAGS	:= optional
+LOCAL_MODULE_CLASS	:= ETC
+LOCAL_SRC_FILES		:= root/fstab.msm7x27
+LOCAL_MODULE_PATH	:= $(TARGET_ROOT_OUT)
+include $(BUILD_PREBUILT)
+
+# init
+include $(CLEAR_VARS)
+LOCAL_MODULE		:= init.$(SAMSUNG_BOOTLOADER).rc
+LOCAL_MODULE_TAGS	:= optional
+LOCAL_MODULE_CLASS	:= ETC
+LOCAL_SRC_FILES		:= root/init.msm7x27.rc
+LOCAL_MODULE_PATH	:= $(TARGET_ROOT_OUT)
+include $(BUILD_PREBUILT)
+
+# init.parts.rc
+include $(CLEAR_VARS)
+LOCAL_MODULE		:= init.$(SAMSUNG_BOOTLOADER).parts.rc
+LOCAL_MODULE_TAGS	:= optional
+LOCAL_MODULE_CLASS	:= ETC
+LOCAL_SRC_FILES		:= root/init.msm7x27.parts.rc
+LOCAL_MODULE_PATH	:= $(TARGET_ROOT_OUT)
+include $(BUILD_PREBUILT)
+
+# init.usb.rc
+include $(CLEAR_VARS)
+LOCAL_MODULE		:= init.$(SAMSUNG_BOOTLOADER).usb.rc
+LOCAL_MODULE_TAGS	:= optional
+LOCAL_MODULE_CLASS	:= ETC
+LOCAL_SRC_FILES		:= root/init.msm7x27.usb.rc
+LOCAL_MODULE_PATH	:= $(TARGET_ROOT_OUT)
+include $(BUILD_PREBUILT)
+
+# init.recovery
+include $(CLEAR_VARS)
+LOCAL_MODULE		:= init.recovery.$(SAMSUNG_BOOTLOADER).rc
+LOCAL_MODULE_TAGS	:= optional
+LOCAL_MODULE_CLASS	:= ETC
+LOCAL_SRC_FILES		:= root/init.recovery.msm7x27.rc
+LOCAL_MODULE_PATH	:= $(TARGET_ROOT_OUT)
+include $(BUILD_PREBUILT)
+
+# ueventd
+include $(CLEAR_VARS)
+LOCAL_MODULE		:= ueventd.$(SAMSUNG_BOOTLOADER).rc
+LOCAL_MODULE_TAGS	:= optional
+LOCAL_MODULE_CLASS	:= ETC
+LOCAL_SRC_FILES		:= root/ueventd.msm7x27.rc
+LOCAL_MODULE_PATH	:= $(TARGET_ROOT_OUT)
+include $(BUILD_PREBUILT)
+
+# rle
+include $(CLEAR_VARS)
+LOCAL_MODULE		:= CALLISTO.rle
+LOCAL_MODULE_TAGS	:= optional
+LOCAL_MODULE_CLASS	:= ETC
+LOCAL_SRC_FILES		:= root/CALLISTO.rle
+LOCAL_MODULE_PATH	:= $(TARGET_ROOT_OUT)
+include $(BUILD_PREBUILT)
+
