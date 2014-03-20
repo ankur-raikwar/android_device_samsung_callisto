@@ -1,6 +1,5 @@
 import /init.${ro.hardware}.parts.rc
 import /init.${ro.hardware}.usb.rc
-import /init.${ro.hardware}.bluetooth.rc
 
 on init
     insmod /lib/modules/fsr.ko
